@@ -6,6 +6,8 @@ public class ControllerGrabber : MonoBehaviour
 {
     private bool _grabbingObject;
     private bool _intersectingObject;
+    public float throwForce = 10;
+  //  public OVRInput.Controller touchController;
 
     public bool userGrab;
     private GameObject grabbedObject;
@@ -27,9 +29,12 @@ public class ControllerGrabber : MonoBehaviour
         if (!userGrab && _grabbingObject)
         {
             grabbedObject.transform.parent = null;
+            grabbedObject.GetComponent<Rigidbody>().useGravity = true;
+            grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObject = null;
             _grabbingObject = false;
         }
+
 
     }
 
@@ -54,6 +59,8 @@ public class ControllerGrabber : MonoBehaviour
                 _grabbingObject = true;
                 grabbedObject = other.gameObject;
                 grabbedObject.transform.SetParent(this.transform);
+                grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+                grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
 
@@ -66,6 +73,7 @@ public class ControllerGrabber : MonoBehaviour
         if (_intersectingObject)
         {
             other.gameObject.GetComponent<Renderer>().material = _savedMaterial;
+           // GetComponent<Rigidbody>().velocity = OVRInput.GetLocalControllerVelocity(Controller)* 3;
             _intersectingObject = false;
         }
 

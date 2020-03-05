@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     public GameObject player;
     public static UnityAction onTriggerDown = null;
     public ControllerGrabber leftGrabber;
+    public ControllerGrabber rightGrabber;
 
     private void Awake()
     {
@@ -59,11 +60,25 @@ public class InputManager : MonoBehaviour
                 onTriggerDown();
         }
 
+        // check for user input: secondary trigger down
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger, OVRInput.Controller.Touch))
+        {
+            rightGrabber.userGrab = true;
+
+        }
+
+        // check for user input: secondary trigger up
+        if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger, OVRInput.Controller.Touch))
+        {
+            rightGrabber.userGrab = false;
+        }
+
         // Secondary controller
         // check for user input: secondary trigger down
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger, OVRInput.Controller.Touch))
         {
             leftGrabber.userGrab = true;
+            
         }
 
         // check for user input: secondary trigger up

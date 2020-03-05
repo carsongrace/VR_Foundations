@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{A9B7E8DE-153B-7C25-D5EE-10D1179D37CD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/VR/Scripts/InputManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Oculus/VR/Scripts/ControllerGrabber.cs">
     <Files>
       <File FileName="Assets/Scripts/Spinner.cs" Line="19" Column="75" />
-      <File FileName="Assets/Oculus/VR/Scripts/InputManager.cs" Line="11" Column="25" />
-      <File FileName="Assets/Oculus/VR/Scripts/ControllerGrabber.cs" />
+      <File FileName="Assets/Oculus/VR/Scripts/InputManager.cs" Line="66" Column="32" />
+      <File FileName="Assets/Oculus/VR/Scripts/ControllerGrabber.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/ThrowObject.cs" Line="8" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
               <Node name="Oculus" expanded="True">
                 <Node name="VR" expanded="True">
                   <Node name="Scripts" expanded="True">
-                    <Node name="InputManager.cs" selected="True" />
+                    <Node name="ControllerGrabber.cs" selected="True" />
                   </Node>
                 </Node>
               </Node>
@@ -22,11 +23,16 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="VR_Foundations" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="10578f64-8180-4dd0-902c-e386c37e3bbb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7eefe494-b01e-4741-bb3f-d1652a180345" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
