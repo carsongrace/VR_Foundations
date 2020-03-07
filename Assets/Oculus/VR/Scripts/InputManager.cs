@@ -12,7 +12,11 @@ public class InputManager : MonoBehaviour
     public static UnityAction onTriggerDown = null;
     public ControllerGrabber leftGrabber;
     public ControllerGrabber rightGrabber;
-
+    public GameObject buttonObjectA;
+    public GameObject buttonObjectB;
+    public GameObject buttonObjectX;
+    public GameObject buttonObjectY;
+    
     private void Awake()
     {
         InputManager.onTriggerDown += TriggerDown;
@@ -85,6 +89,62 @@ public class InputManager : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.RawButton.LHandTrigger, OVRInput.Controller.Touch))
         {
             leftGrabber.userGrab = false;
+        }
+
+        // check for A button press
+        if (OVRInput.GetDown(OVRInput.Button.One))
+        {
+            if (buttonObjectA.activeSelf)
+            {
+                buttonObjectA.SetActive(false);
+            }
+            else
+            {
+                buttonObjectA.SetActive(true);
+            }
+            
+        }
+
+        // check for B button press
+        if (OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            if (buttonObjectB.activeSelf)
+            {
+                buttonObjectB.SetActive(false);
+            }
+            else
+            {
+                buttonObjectB.SetActive(true);
+            }
+
+        }
+
+        // check for X button press
+        if (OVRInput.GetDown(OVRInput.Button.Three))
+        {
+            if (buttonObjectX.activeSelf)
+            {
+                buttonObjectX.SetActive(false);
+            }
+            else
+            {
+                buttonObjectX.SetActive(true);
+            }
+
+        }
+
+        // check for Y button press
+        if (OVRInput.GetDown(OVRInput.Button.Four))
+        {
+            if (buttonObjectY.activeSelf)
+            {
+                buttonObjectY.SetActive(false);
+            }
+            else
+            {
+                buttonObjectY.SetActive(true);
+            }
+
         }
 
 

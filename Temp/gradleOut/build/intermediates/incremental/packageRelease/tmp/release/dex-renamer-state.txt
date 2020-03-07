@@ -1,0 +1,4 @@
+#Sat Mar 07 17:01:18 EST 2020
+base.0=/Users/carsonlevine/Desktop/Unity/VR_Foundations/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

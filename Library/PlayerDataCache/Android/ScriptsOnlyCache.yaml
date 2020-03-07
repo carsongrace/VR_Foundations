@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ControllerGrabber
-    - Readme
     - Spinner
     Oculus.VR.Editor.dll:
     - OVRConfig
@@ -19,6 +18,9 @@ ScriptsOnlyBuild:
     Unity.RenderPipelines.Lightweight.Runtime.dll:
     - UnityEngine.Rendering.LWRP.ForwardRendererData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
+    - UnityEngine.Rendering.LWRP.LightweightRenderPipelineEditorResources
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -1972,7 +1974,7 @@ ScriptsOnlyBuild:
     className: FingerTipPokeTool
   - hash:
       serializedVersion: 2
-      Hash: eeebc5d60fa6b80e6fd0f31fd27759b0
+      Hash: a888c83a23e8ee5f3349cc064f48069d
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: InputManager
